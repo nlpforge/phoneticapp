@@ -20,7 +20,7 @@ if target:
 			score_1 = 0.0
 		else:
 			score_1 = int(100 - phonetic_distance(target, cands_1))
-		st.text(str(score_1))
+		st.text(f"Your score is {str(score_1)} out of 100")
 
 		st.text("Player 2 Turn")
 		candidates_2 = st.text_input(f"Enter candidates separated by space", '', key="second").lower()
@@ -32,26 +32,9 @@ if target:
 				score_2 = 0.0
 			else:
 				score_2 = int(100 - phonetic_distance(target, cands_2))
-			st.text(str(score_2))
+			st.text(f"Your score is {str(score_2)} out of 100")
 
 			if score_1 > score_2:
 				st.text("Player 1 wins!")
 			else:
 				st.text("Player 2 wins!")
-
-
-
-
-
-
-
-
-
-
-
-
-
-# st.button("Finish submission", key="button")	
-
-
-
